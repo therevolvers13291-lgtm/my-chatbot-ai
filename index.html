@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nova AI Chat</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">✦</div>
+        <div>
+          <h1>Nova AI</h1>
+          <p>Your AI assistant</p>
+        </div>
+      </div>
+      <button id="new-chat" class="new-chat">＋ New chat</button>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite">
+      <div id="welcome" class="welcome">
+        <div class="welcome-icon">✦</div>
+        <h2>What can I help you with?</h2>
+        <p>Ask a question, explore an idea, or get help with a project.</p>
+        <div class="suggestions">
+          <button data-prompt="Explain photosynthesis in simple words.">
+            Explain a school topic
+          </button>
+          <button data-prompt="Give me creative ideas for a project.">
+            Brainstorm project ideas
+          </button>
+          <button data-prompt="Teach me one interesting science fact.">
+            Learn something new
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <form id="chat-form" class="composer">
+      <textarea
+        id="message"
+        rows="1"
+        maxlength="4000"
+        placeholder="Message Nova AI..."
+        aria-label="Your message"
+        required
+      ></textarea>
+      <button id="send" type="submit" aria-label="Send message">↑</button>
+    </form>
+    <p class="note">AI can make mistakes. Check important information.</p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
